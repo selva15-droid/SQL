@@ -1,0 +1,31 @@
+Aggregate
+---------
+	An aggregate function in sql performs a calculation on a set of values and returns a single value.
+It's commonly used with the 'GROUP BY' clause to group rows sharing a property and apply the function to each
+group.
+
+Common Aggregate function:
+	SUM() - Returns the total sum of a numeric column
+	AVG() - Returns the average of a numeric column
+	COUNT() - Returns the number of rows
+	MAX() - Returns the maximum value
+	MIN() - Returns the minimum value
+
+Syntax:
+	SELECT SUM(column_name) FROM table_name;
+	SELECT AVG(column_name) FROM table_name;
+	SELECT COUNT(column_name) FROM table_name;
+	SELECT MAX(column_name) FROM table_name;
+	SELECT MIN(column_name) FROM table_name;
+
+TOP/LIMIT:
+	MYSQL - LIMIT
+	Syntax: SELECT * FROM table_name LIMIT number;
+	
+	SQL SERVER - TOP	
+	Syntax: SELECT TOP number * FROM table_name;
+
+DISTINCT - Ignore Duplicates
+Syntax:
+	SELECT DISTINCT column_name
+	FROM table_name;

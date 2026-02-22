@@ -1,0 +1,91 @@
+Joins
+-----
+	These statemets allow us to acces information from two or more tables at once. Thery also keep our database normalized.
+
+Types of Joins:
+	Inner join
+	Left join / Left outer join
+	Right join / Right outer join
+	Cross join / Cartesian join
+	Self join
+	Full join
+
+Inner join
+	It return dataset that have matcing values in both tables.
+
+Syntax:
+	SELECT Table1.column, Table2.Column,...
+	FROM Table1 INNER JOIN/JOIN Table2
+	ON Table1.CommonColumn = Table2.CommonColumn;
+
+Left join
+	It returns all records from the left table and matched records from the right table.
+
+Syntax:
+	SELECT Table1.column, Table2.Column,...
+	FROM Table1 LEFT JOIN Table2
+	ON Table1.CommonColumn = Table2.CommonColumn;
+
+Right join
+	It returns all records from the right table and matched records from the left table.
+
+Syntax:
+	SELECT Table1.column, Table2.Column,...
+	FROM Table1 RIGHT JOIN Table2
+	ON Table1.CommonColumn = Table2.CommonColumn;
+
+Full join
+	It returns all recoerds when there is a match in either the left table or right table.
+
+Syntax:
+SQL SERVER
+----------
+	SELECT Table1.column, Table2.Column,...
+	FROM Table1 FULL JOIN Table2
+	ON Table1.CommonColumn = Table2.CommonColumn;
+
+MYSQL
+-----
+	SELECT Table1.column, Table2.Column,...
+	FROM Table1 LEFT JOIN Table2
+	ON Table1.CommonColumn = Table2.CommonColumn
+	UNION
+	SELECT Table1.column, Table2.Column,...
+	FROM Table1 RIGHT JOIN Table2
+	ON Table1.CommonColumn = Table2.CommonColumn;
+
+Cross join/Cartesian join
+	A cartesian join or cross join returns the cartesian product of two tables, meaning each row from the
+first table is combined with every row from the second table. This type of joins does not require any 
+specific condition or matching column between the two table.
+
+Syntax:
+	SELECT Table1.Column, Table2.Column...
+	FROM Table1 CROSS JOIN Table2;
+
+Self join
+	Table is joined with itself.
+
+Syntax:
+	SELECT column
+	FROM table1_name
+	WHERE condition;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

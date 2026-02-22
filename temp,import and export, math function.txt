@@ -1,0 +1,117 @@
+Database Import and Export
+--------------------------
+	To save databse to a .sql file)
+
+
+Temporary Table
+---------------
+	Temporary table exist only during the session.
+	In SQL SERVER use # for local temp table. ## for global temp tables.
+
+Syntax:
+MYSQL
+	CREATE TEMPORARY TABLE table_name(
+		column1 datatype,
+		column2 datatype,...);
+
+SQL SERVER
+	CREATE TABLE #table_name (
+		column1 datatype,
+		column2 datatype,...);
+
+Normalization
+-------------
+	Normalization organizes data to minimize redundancy.
+
+Form types:
+	1NF(Normal Form) -> Separated by comma in a single column.
+	2NF -> Separate data by key.
+	3NF -> Separate key column depends on other key column.
+
+Example:
+	Unnormalized table	
+		create table student(id,name,subject);
+		insert into student(1,'Iswarya','Maths,English,Tamil);
+
+	1NF -> create table studentSubject(id,name,subject);
+	       insert into studentSubject(1,'Iswarya','Maths'),(1,'Iswarya','English');
+
+	2NF -> 	create table subject(subjectid,subjectname);
+		create table student(studentid,studentname,subjectid);
+
+	3NF ->  create table student(studentid,studentname);
+		create table subject(subjectid,subjectname);
+		create table studentSubject(studentid,subjectid);
+
+Math Functions
+--------------
+	1) ABS() - Returns the absolute(positive) value of a number
+	Syntax: ABS(number);
+
+	2) CEIL()/CEILING() - Rounds a number up to the nearest integer.
+	Syntax: MySQL -> CEIL(number); SQL SERVER -> CEILING(number);
+
+	3) FLOOR() - Rounds a number Down to the nearest integer.
+	Syntax: FLOOR(number);
+
+	4) ROUND() - Rounds a number to a specified number of decimal places.
+	Syntax: ROUND(number, decimal);
+
+	5) MOD()/% - Returns the remainder of a division.
+	Syntax: MYSQL -> MOD(x,y); SQL SERVER -> x % y;
+
+	6) POWER() - Return a raises a number to a power.
+	Syntax: POWER(base, exponent);
+
+	7) RAND() - Returns a random float between 0 and 1;
+	Syntax: RAND();
+
+	8) SQRT() - Returns the square root of number.
+	Syntax: SQRT(number);
+
+	9) SIGN() - Returns -1,0 or 1 depending on the sign of the number.
+	Syntax: SIGN(number);
+
+	10) TRUNCATE()(only in MYSQL) - Truncates a number to a specific decimal precision(without rounding).
+	Syntax: TRUNCATE(number, decimals);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

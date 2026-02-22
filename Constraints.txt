@@ -1,0 +1,12 @@
+Constraints
+-----------
+	Constraints are the rules and restructions applied on the data in a table.
+
+Types of constraints:
+	1) Check
+	2) Not null
+	3) Unique	
+	4) Primary key
+	5) Default
+	6) Foregin key
+	7) Index

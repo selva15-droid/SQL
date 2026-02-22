@@ -1,0 +1,52 @@
+Like
+----
+Search for a specified pattern in a column.
+
+syntax:
+	SELECT column1, column2
+	FROM table_name
+	WHERE column LIKE pattern;
+
+The pattern can include:
+	% - To match any character
+	_ - (underscore) to match a single character
+
+% and _ is named as wildcard.
+
+Examples:
+1) Employee names start with 'A' in employee table.
+
+	SELECT EmpName FROM employee
+	WHERE EmpName like 'a%';
+
+2) Employee names end with 'A' in employee table.
+
+	SELECT EmpName FROM employee
+	WHERE EmpName like '%a';
+
+3) Employee names who are come from 'navalur' in employee table.
+
+	SELECT EmpName FROM employee
+	WHERE address like '%navalur%';
+
+4) Employee name from the employee table who are live in London
+	
+	SELECT EmpName FROM employee
+	WHERE city like 'L_nd_n';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

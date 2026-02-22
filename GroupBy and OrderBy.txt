@@ -1,0 +1,46 @@
+Order By
+--------
+	Used to sort the result set by one or more columns. The default order is ascending,
+specify descending if needed.
+
+key words 
+	Ascending - asc
+	Descending - desc
+
+Syntax:
+	SELECT * FROM table_name ORDER BY column_name ASC/DESC;
+
+Group By
+--------
+	Used to group rows that have the same values in specified columns. Commonly used with aggregate functions like SUM(), COUNT(),
+AVG(), MAX(), MIN().
+
+Syntax:
+	SELECT column1,AGGREGATE_FUNCTION(coumn2) FROM table_name GROUP BY coumn1;
+
+Having
+------
+	The HAVING clause is used to filter groups after applying GROUP BY, typically with aggregate functions.
+
+When to use HAVING
+	Use WHERE to filter rows before grouping.
+	Use HAVING to filter groups after aggregation.
+
+Syntax
+	SELECT column1,AGGREGATE_FUNCTION(column2)
+	FROM table_name 
+	GROUP BY column1
+	HAVING AGGREGATE_FUNCTION(column2) condition;
+	
+
+
+
+
+
+
+
+
+
+
+
+

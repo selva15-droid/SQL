@@ -1,0 +1,40 @@
+Function
+--------
+	Able to reuse the code. If the user do the same work with different inputs for each time means need to
+use the function.
+
+Types of function:
+	1) Scalar function
+	2) Table valued function (only for SQL SERVER)
+
+Scalar function
+	Return a single value. Some times will get the output without table. 
+(EX: Aggregate function)
+	Key word -> function
+Syntax:
+MySQL 
+	DELIMITIR $$
+	CREATE FUNCTION function_name(parameter_name datatype,..)
+	RETURNS datatype
+	DETERMINISTIC
+	BEGIN
+		RETURN --query--
+	END $$
+	DELIMITIE
+
+SQL SERVER
+	CREATE FUNCTION function_name(parameter_name datatype,..)
+	RETURNS datatype
+	BEGIN
+		RETURN --query--
+	END
+
+Call the function -> SELECT function_name(parameter_value,..);
+
+Table-Valued Functions(TVFs) -- (only for SQL SERVER)
+Return a table
+	1) Inline Table-Valued Functions
+	   Defined with a single SELECT statement.
+	2) Multi-Statement Table-Valued Functions
+	   Can have multiple statements and use table variables.
+

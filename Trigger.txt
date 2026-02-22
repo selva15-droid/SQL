@@ -1,0 +1,27 @@
+Trigger
+-------
+	A Trigger is a set of instructions in SQL that automatically executes in response to certain events on 
+a table or view, such as INSERT, UPDATE, DELETE.
+
+Syntax:
+MYSQL
+	DELIMITER $$
+	CREATE TRIGGER trigger_name
+	{BEFORE | AFTER} { INSERT | UPDATE | DELETE}
+	ON table_name
+	FOR EACH ROW
+	BEGIN
+		-- SQL statements
+	END $$
+	DELIMITER ;
+
+SQL SERVER
+	CREATE TRIGGER trigger_name
+	ON table_name
+	AFTER | INSTEAD OF INSERT | UPDATE | DELETE
+	AS
+	BEGIN
+		-- SQL statements
+	END;
+	
+	
